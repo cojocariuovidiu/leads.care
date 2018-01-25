@@ -1,0 +1,10 @@
+<div class="row clearfix bg-primary">
+    <header></header>
+    <label class="sub-header">
+        <p class="sub-header-text">Lead Details</p>
+    </label>
+    <lead-form (SearchCriteriaChange)="SearchCriteriaChange()" [SearchMode]="false"></lead-form>
+    <div class="save-changes-button-container">
+        <button [disabled]="!LeadForm.IsValid()" class="btn btn-primary" (click)="SaveLead()">Save</button>
+    </div>
+</div>

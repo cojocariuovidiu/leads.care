@@ -1,0 +1,62 @@
+<mat-card>
+  <div *ngIf="!IsNewUser" (click)="OnChangeUserStatus()"><a>New User?</a></div><br/>
+  <div *ngIf="IsNewUser" (click)="OnChangeUserStatus()"><a>Have an account? Log In Here!</a></div>
+  <!-- <h2 *ngIf="ErrorMessage">{{ErrorMessage}}</h2> -->
+  <form [formGroup]="AuthForm">
+      <div *ngIf="IsNewUser">
+          <div>
+              <p class="field-label">Name</p>
+          </div>
+          <div class="field-input">
+              <input type="text"
+                      class="form-input"
+                      placeholder="name"
+                      id="name"
+                      formControlName="Name" />
+          </div>
+      </div>
+      <div *ngIf="IsNewUser">
+          <div>
+              <p class="field-label">Email</p>
+          </div>
+          <div class="field-input">
+              <input type="text"
+                      class="form-input"
+                      placeholder="email"
+                      id="email"
+                      formControlName="Email" />
+          </div>
+      </div>
+      <div>
+          <div>
+              <p class="field-label">User Name</p>
+          </div>
+          <div class="field-input">
+              <input type="text"
+                      class="form-input"
+                      placeholder="user name"
+                      id="username"
+                      formControlName="Username">
+          </div>
+      </div>
+      <div>
+          <div>
+              <p class="field-label">Password</p>
+          </div>
+          <div class="field-input">
+              <input type="password"
+                      class="form-input"
+                      placeholder="password"
+                      id="password"
+                      formControlName="Password">
+          </div>
+      </div>
+
+      <div class="save-changes-button-container">
+          <button *ngIf="!IsNewUser" [disabled]="!AuthForm.valid" (click)="Login()" mat-button mat-raised-button>Log In</button>
+      </div>
+      <div class="save-changes-button-container">
+          <button *ngIf="IsNewUser" [disabled]="!AuthForm.valid" (click)="SignUp()" mat-button>Sign Up</button>
+      </div>
+  </form>
+</mat-card>

@@ -1,0 +1,29 @@
+<div class="field-input">
+    <div class="container-form" *ngIf="PhoneNumber">
+        <input [(ngModel)]="PhoneNumber.AreaCode"
+                name="PhoneNumber.AreaCode"
+                class="form-input-phone-3-digits"
+                type="text"
+                maxlength="3"
+                placeholder="XXX"
+                (ngModelChange)="OnNewDigitEntered($event, 1)"
+                style="margin-left:44px;"
+                #field1 /><span> - </span>
+        <input [(ngModel)]="PhoneNumber.ExchangeCode"
+                name="PhoneNumber.ExchangeCode"
+                class="form-input-phone-3-digits"
+                id="tabbable-number-2"
+                type="text"
+                maxlength="3"
+                placeholder="XXX"
+                (ngModelChange)="OnNewDigitEntered($event, 2)"
+                #field2 /><span> - </span>
+        <input [(ngModel)]="PhoneNumber.SubscriberNumber"
+                name="PhoneNumber.SubscriberNumber"
+                class="form-input-phone-4-digits tabbable"
+                type="text"
+                maxlength="4"
+                placeholder="XXXX"
+                #field3 />
+    </div>
+</div>

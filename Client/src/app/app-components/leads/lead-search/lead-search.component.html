@@ -1,0 +1,17 @@
+<div class="row">
+    <header></header>
+    <mat-expansion-panel [hideToggle]="true">
+        <mat-expansion-panel-header class="sub-header" id="search-header">
+            <p class="sub-header-text">search filters</p>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            <div>
+                <button (click)="OnClearSearchCriteria()" class="btn">clear search</button>
+                <lead-form (LeadChange)="SearchCriteriaChange()" [SearchMode]="true"></lead-form>
+            </div>
+        </mat-panel-description>
+    </mat-expansion-panel>
+    <ng-container *ngFor="let letter of Letters">
+        <lead-letter-group [Letter]="letter" [LetterGroup]="SearchResults[letter]"></lead-letter-group>
+    </ng-container>
+</div>

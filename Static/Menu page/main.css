@@ -1,0 +1,311 @@
+html {
+    background: #e6e9e9;
+}
+
+body {
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+    color: #545454;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 500px;
+    height: 600px;
+    padding: 2em 2em 4em;
+}
+
+
+/* this is the begining top nav section */
+
+
+.top-bar-container {
+    height: 50px;
+    width: 100%;
+    background-color: #026670;
+    box-sizing: border-box;  
+    margin: 0 auto;
+    font-size: 24px;   
+}
+
+.top-bar-sign-out { 
+    width: 150px;
+    height: 50px;
+    text-align: right;
+    font-size: 24px;  
+    float: right;
+    
+}
+
+.sign-out {
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;  
+    vertical-align: middle;
+    line-height: 50px;
+    margin-right: 20px; 
+}
+
+.top-bar-main-menu {
+    width: 150px;
+    height: 50px;
+    text-align: left;
+    font-size: 24px;  
+    float: left;
+}
+
+.main-menu {
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;  
+    vertical-align: middle;
+    line-height: 50px;
+    margin-left: 20px;
+}
+
+/* this is the end of top nav section */
+
+/* this is the begining of two bottons section */ 
+
+.two-button-container {
+    height: 450px;
+    width: 100%;
+    background-color: aqua;  
+}
+
+/* button-track-new-lead*/
+
+a {
+    text-decoration: none
+}
+
+.button-one-track-new-lead {
+    height: 60%;
+    width: 100%;
+    background-color: white;
+    border-style: solid;
+    border-color: #9FEDD7;
+    border-width: 10px;
+    box-sizing: border-box;
+}
+
+.button-one-track-new-lead:active  {
+    background-color: #EDEAE5;
+    border-color: white;   
+}
+
+.track-new-leads-text-container {
+    height: 40%;
+    width: 100%;
+}
+
+#track-new-lead-text {
+    text-align: center; 
+    font-family: sans-serif;
+    font-size: 28px;
+    color: #9FEDD7;
+    vertical-align: middle; 
+}
+
+.svg-track-new-lead {
+    height: 200%;
+    width: 100%;
+    text-align: center; 
+}
+
+#track-new-image {
+    width: 100px;
+    height: 130px;
+}
+
+
+/* button-search-leads*/
+
+.button-two-search-leads {
+    height: 60%;
+    width: 100%;
+    background-color: white;
+    border-style: solid;
+    border-color: #9FEDD7;
+    border-width: 10px;
+    box-sizing: border-box;
+    display: flex;  
+}
+
+.button-two-search-leads:active  {
+    background-color: #EDEAE5;
+    border-color: white;   
+}
+
+.search-leads-container {
+    height: 30%;
+    width: 100%;   
+}
+
+#search-new-lead-text {
+    text-align: center; 
+    font-family: sans-serif;
+    font-size: 28px;
+    color: #9FEDD7;
+    vertical-align: middle;   
+}
+
+.svg-search-leads {
+    height: 110px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#search-leads-image {
+    width: 100px;
+    height: 130px;
+}
+
+
+/* media queries */
+    
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+body,html  {
+        background-color: #026670;
+        height: 100%;
+        width:  100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0; 
+        width: 100%;   
+    }
+
+/* this is the begining top nav section */
+
+.top-bar-container {
+    height: 50px;
+    width: 100%;
+    background-color: #026670;
+    box-sizing: border-box;  
+    margin: 0 auto;
+    font-size: 24px;   
+}
+
+.top-bar-sign-out { 
+    width: 150px;
+    height: 50px;
+    text-align: right;
+    font-size: 24px;  
+    float: right;   
+}
+
+.sign-out {
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;  
+    vertical-align: middle;
+    line-height: 50px;
+    margin-right: 20px; 
+}
+
+.top-bar-main-menu {
+    width: 150px;
+    height: 50px;
+    text-align: left;
+    font-size: 24px;  
+    float: left;
+}
+
+.main-menu {
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;  
+    vertical-align: middle;
+    line-height: 50px;
+    margin-left: 20px;
+}
+
+/* this is the end of top nav section */
+
+/* this is the begining of two bottons section */ 
+
+.two-button-container {
+    height: 465px;
+    width: 100%;
+    background-color: aqua;    
+}
+
+/* button-track-new-lead*/
+
+.button-one-track-new-lead {
+    height: 55%;
+    width: 100%;
+    background-color: white;
+    border-style: solid;
+    border-color: #9FEDD7;
+    border-width: 10px;
+    box-sizing: border-box;   
+}
+
+.track-new-leads-text-container {
+    height: 40%;
+    width: 100%;
+}
+
+#track-new-lead-text {
+    text-align: center; 
+    font-family: sans-serif;
+    font-size: 28px;
+    color: #9FEDD7;
+    vertical-align: middle;   
+}
+
+.svg-track-new-lead {
+    height: 200%;
+    width: 100%;
+    text-align: center; 
+}
+
+#track-new-image {
+    width: 40%;
+} 
+
+
+/* button-search-leads*/
+
+.button-two-search-leads {
+    height: 55%;
+    width: 100%;
+    background-color: white;
+    border-style: solid;
+    border-color: #9FEDD7;
+    border-width: 10px;
+    box-sizing: border-box;
+    display: flex;  
+}
+
+.search-leads-container {
+    height: 30%;
+    width: 100%;   
+}
+
+#search-new-lead-text {
+    text-align: center; 
+    font-family: sans-serif;
+    font-size: 28px;
+    color: #9FEDD7;
+    vertical-align: middle;   
+}
+
+.svg-search-leads {
+    height: 110px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#search-leads-image {
+    width: 40%;
+}
+
+}
+

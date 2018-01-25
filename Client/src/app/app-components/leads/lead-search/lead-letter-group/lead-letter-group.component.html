@@ -1,0 +1,8 @@
+<div class="letter-wrap">
+    <div class="letter-section">
+        <p class="letter">{{Letter}}</p>
+    </div>
+</div>
+<div *ngFor="let lead of LetterGroup">
+    <lead-row [Lead]="lead">{{lead.Name}}</lead-row>
+</div>

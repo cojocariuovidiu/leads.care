@@ -1,0 +1,10 @@
+{
+    "ILeadRepository": {
+        "path": "Repositories.Mongo/LeadRepository",
+        "name": "LeadRepository"
+    },
+    "IUserRepository": {
+        "path": "Repositories.Mongo/UserRepository",
+        "name": "UserRepository"
+    }
+}

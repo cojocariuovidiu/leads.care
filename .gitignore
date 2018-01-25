@@ -1,0 +1,26 @@
+# Server
+node_modules
+**.js
+**.js.map
+Client/dist
+.vscode/*
+
+# Client
+# compiled output
+Client/dist
+Client/tmp
+Client/out-tsc
+
+# dependencies
+Client/node_modules
+
+# misc
+Client/.sass-cache
+Client/connect.lock
+Client/coverage
+
+# e2e
+#Client/e2e/*
+
+# System Files
+.DS_Store

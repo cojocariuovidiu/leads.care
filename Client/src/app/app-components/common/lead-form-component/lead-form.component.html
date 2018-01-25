@@ -1,0 +1,147 @@
+<input class="this-guy" id="toggle" type="checkbox" checked />
+
+<!-- after menu collapses-->
+    <form #LeadForm="ngForm" novalidate>
+        <div>
+            <div class="client-name-text-seek">
+                <p class="field-label">Lead Status</p>
+            </div>
+            <div class="field-input">
+                <div class="radio-wraper">
+                    <input type="checkbox" 
+                            [checked]="LeadModel.Status===StatusTypes.Active"
+                            (change)="OnStatusChange($event)" />
+                    <span class="cr"><i class="check-box-one"></i></span> Is this lead currently looking?
+                </div>
+            </div>
+        </div>
+        <div class="short-green-line"></div>
+
+        <div>
+            <div>
+                <p class="field-label">Client Name</p>
+            </div>
+            <div class="field-input">
+                <div class="container-form">
+                    <input [(ngModel)]="LeadModel.Name"
+                            name="Name"
+                            class="form-input"
+                            type="text"
+                            placeholder="Lead's Name" />
+                </div>
+            </div>
+        </div>
+        <div class="short-green-line" *ngIf="!SearchMode"></div>
+
+        <!-- Phone Number -->
+        <div *ngIf="!SearchMode">
+            <div>
+                <p class="field-label">Phone</p>
+            </div>
+            <phone-form [PhoneNumber]="LeadModel.Phone"></phone-form>
+            <!-- <div class="field-input">
+                <div class="container-form" *ngIf="LeadModel.Phone">
+                    <input [(ngModel)]="LeadModel.Phone.AreaCode"
+                            name="Phone.AreaCode"
+                            class="form-input-phone-3-digits"
+                            type="text"
+                            placeholder="XXX"
+                            style="margin-left:44px;"/><span> - </span>
+                    <input [(ngModel)]="LeadModel.Phone.ExchangeCode"
+                            name="Phone.ExchangeCode"
+                            class="form-input-phone-3-digits"
+                            type="text"
+                            placeholder="XXX" /><span> - </span>
+                    <input [(ngModel)]="LeadModel.Phone.SubscriberNumber"
+                            name="Phone.SubscriberNumber"
+                            class="form-input-phone-4-digits"
+                            type="text"
+                            placeholder="XXXX" />
+                </div>
+            </div> -->
+        </div>
+        <div class="short-green-line"></div>
+
+        <!-- move in date -->
+        <div>
+            <div>
+                <p class="field-label">Move in date</p>
+            </div>
+            <div class="field-input">
+                <div class="container-form">
+                    <my-date-picker (dateChanged)="OnDateChanged($event)"
+                                    [options]="DatePickerOptions"
+                                    [ngModelOptions]="{standalone: true}"
+                                    [(ngModel)]="DateSelected" ></my-date-picker>
+                </div>
+            </div>
+        </div>
+        <div class="short-green-line"></div>
+
+        <!-- budget -->
+        <div>
+            <div>
+                <p class="field-label">Max-Budget</p>
+            </div>
+            <div class="field-input">
+                <div class="container-form">
+                    <input [(ngModel)]="LeadModel.MaxBudget"
+                            class="form-input"
+                            type="text"
+                            name="MaxBudget"
+                            placeholder="Maximum Budget" />
+                </div>
+            </div>
+        </div>
+        <div class="short-green-line"></div>
+
+        <!-- Max-bedrooms -->
+        <div>
+            <div>
+                <p class="field-label">Max-Bedroom</p>
+            </div>
+            <div class="field-input">
+                <div class="container-form">
+                    <input [(ngModel)]="LeadModel.MaxBedrooms"
+                            class="form-input"
+                            type="text"
+                            name="MaxBedrooms"
+                            placeholder="Maximum Bedrooms" />
+                </div>
+            </div>
+        </div>
+        <div class="short-green-line"></div>
+
+        <!-- Neighborhood Checkboxes -->
+        <div>
+            <p class="field-label">Select Neighborhoods</p>
+        </div>
+        <div class="field-input">
+            <div class="checkbox-array-container">
+                <div *ngFor="let neighborhood of Neighborhoods; let i = index">
+                    <input type="checkbox"
+                            name="{{neighborhood}}"
+                            [value]="neighborhood"
+                            [(ngModel)]="NeighborhoodsCheckboxObject[neighborhood]"
+                            [(checked)]="NeighborhoodsCheckboxObject[neighborhood]"
+                            (change)="PushNeighborhood($event)" />
+                    <span class="cr"><i class="check-box-one"></i><label for="{{neighborhood}}"> {{neighborhood}}</label></span>
+                    <!-- <span class="cr"><i class="check-box-one"></i></span> {{neighborhood}} -->
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!SearchMode" class="short-green-line"></div>
+
+        <div *ngIf="!SearchMode">
+            <div class="short-green-line-hoods"></div>
+            <p class="field-label"> Notes on lead</p>
+            <div class="input-form-field-wrapper">
+                <textarea class="form-input" 
+                            rows="5"
+                            cols="50"
+                            name="Notes"
+                            [(ngModel)]="LeadModel.Notes"
+                            placeholder="Your notes about this lead here..."></textarea>
+            </div>
+        </div>
+    </form>

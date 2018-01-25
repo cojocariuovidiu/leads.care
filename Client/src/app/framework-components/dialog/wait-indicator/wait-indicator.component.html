@@ -1,0 +1,13 @@
+﻿<!-- <vs-modal-container [IsModalVisible]="IsCreationComplete" Size="modal-sm">
+    <div class="modal-body" style="min-height: 200px">
+        <div class="margin-top">
+            <vs-area-loader [Message]="Model.Message"
+                            [IsSpinning]="true"></vs-area-loader>
+        </div>
+    </div>
+</vs-modal-container> -->
+
+<mat-dialog-content style="text-align:center;">
+    <h2 mat-dialog-title>{{ message }}</h2>
+    <mat-spinner></mat-spinner>
+</mat-dialog-content>

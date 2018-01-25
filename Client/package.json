@@ -31,7 +31,7 @@
     "spin.js": "^2.3.2"
   },
   "devDependencies": {
-    "@angular/cli": "1.4.7",
+    "@angular/cli": "^1.6.5",
     "@angular/compiler-cli": "^4.2.4",
     "@angular/language-service": "^4.2.4",
     "@types/jasmine": "~2.5.53",

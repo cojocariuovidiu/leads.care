@@ -4,8 +4,9 @@ import { LeadService } from '../../../Lead.Service';
 
 @Component({
     moduleId: module.id,
-    selector: 'lead-row',
-    templateUrl: 'lead-row.component.html'
+    selector: 'pm-lead-row',
+    templateUrl: 'lead-row.component.html',
+    styleUrls: ['lead-row.component.css']
 })
 export class LeadRowComponent implements OnInit {
     @Input() Lead: any;

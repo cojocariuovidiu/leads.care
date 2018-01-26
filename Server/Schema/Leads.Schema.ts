@@ -1,6 +1,5 @@
 import * as mongoose from 'mongoose';
 import * as autoIncrement from 'mongoose-auto-increment';
-import { Dictionary } from '../../Common/Types/Dictionary';
 
 export interface ILeadSchema extends mongoose.Document {
     LeadId: mongoose.Schema.Types.Number,
@@ -28,7 +27,8 @@ const _leadSchema: mongoose.Schema = new mongoose.Schema({
     Phone: {
         AreaCode: mongoose.Schema.Types.Number,
         ExchangeCode: mongoose.Schema.Types.Number,
-        SubscriberNumber: mongoose.Schema.Types.Number
+        SubscriberNumber: mongoose.Schema.Types.Number,
+        FormattedNumber: mongoose.Schema.Types.String
     },
     UserId: mongoose.Schema.Types.Number,
     Notes: mongoose.Schema.Types.String

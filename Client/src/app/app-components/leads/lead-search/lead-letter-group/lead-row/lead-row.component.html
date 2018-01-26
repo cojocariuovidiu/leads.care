@@ -1,28 +1,18 @@
-<a [routerLink]="['/leads', Lead.LeadId]">
-    <div>
-        <div [ngClass]="{'orange-block-container': Lead.Status==1}" class="lead-arnold-a">
+<mat-expansion-panel [hideToggle]="true">
+    <mat-expansion-panel-header [ngClass]="{'orange-block-container': Lead.Status==1}" class="lead-arnold-a">
+        <div class="expansion-panel-header">
             <p class="lead-name">{{Lead.Name}}</p>
+            <button [routerLink]="['/leads', Lead.LeadId]" mat-button>edit</button>
+            <div></div>
         </div>
-        <div class="underline"></div>
-    </div>
-</a>
-
-
-<!-- <div>
-    <div class="row">
-        <input type="checkbox" id="expend" />
-        <div class="medium-12 small-12 columns smalldesc">
-            <div [ngClass]="{'orange-block-container': Lead.Status==1}" class="lead-arnold-a">
-                <p class="lead-name">{{Lead.Name}}</p>
-            </div>
-            <p class="font16 ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-                to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            </p>
+    </mat-expansion-panel-header>
+    <mat-panel-description>
+        <div class="collapsed-detail">
+            <div><p class="field-header">Phone</p> {{Lead.Phone.FormattedNumber}}</div>
+            <div><b class="field-header">Email</b> {{Lead.Email}}</div>
+            <div><b class="field-header">Notes</b> {{Lead.Notes}}</div>
         </div>
-        <label for="expend">Read More</label>
-    </div>
-</div> -->
+
+    </mat-panel-description>
+</mat-expansion-panel>
+<div class="underline"></div>

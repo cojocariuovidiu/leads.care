@@ -1,18 +1,11 @@
 import { LeadModel } from '../../Common/Models/LeadModel';
-import * as mongoose from 'mongoose';
-import { decode } from 'jsonwebtoken';
 import { LeadSearchCriteriaModel } from '../../Common/Models/LeadSearchCriteriaModel';
-import { SortFieldModel } from '../../Common/Models/SortFieldModel';
 import { PhoneNumberModel } from '../../Common/Models/PhoneNumberModel';
 import { LeadsDictionaryModel } from '../../Common/Models/LeadsDictionaryModel';
 import { DictionarySearchResultModel } from '../../Common/Models/DictionarySearchResultModel';
 import { ILeadRepository } from '../../Common/Interfaces/ILeadRepository';
-import { SortOrder } from '../../Common/Enums/SortOrder';
 import { StatusTypes } from '../../Common/Enums/StatusTypes';
-import { Dictionary } from '../../Common/Types/Dictionary';
 import { Strings } from '../../Common/Strings';
-import { ValidationError } from '../Framework/Error/ValidationError';
-import { Logger } from '../Framework/Logging/Logger';
 import { LeadSchema } from '../Schema/Leads.Schema';
 import { BadRequestError } from 'routing-controllers';
 import { NotFoundError } from 'routing-controllers';
@@ -58,6 +51,7 @@ export class LeadRepository implements ILeadRepository {
         leads = this.SortAlphabetic(leads);
         let leadsDictionary = new LeadsDictionaryModel();
         for (let lead of leads) {
+            lead.Phone.FormattedNumber = this.FormatPhoneNumber(lead.Phone);
             leadsDictionary.Item(lead.Name[0].toUpperCase()).push(lead);
         }
         return leadsDictionary;
@@ -81,23 +75,6 @@ export class LeadRepository implements ILeadRepository {
             matchingLeads = leads;
         }
         return matchingLeads;
-    }
-
-    private SortFields(leads: LeadModel[], sortFields: SortFieldModel[]): LeadModel[] {
-        sortFields = sortFields.sort(o => o.RankSeq);
-        let sortedArray: LeadModel[] = leads;
-        sortFields.forEach((sf) => {
-            sortedArray = leads.sort((a, b) => {
-                if (a > b) {
-                    return sf.SortOrder === SortOrder.Ascending ? 1 : -1;
-                }
-                if (a < b) {
-                    return sf.SortOrder === SortOrder.Ascending ? -1 : 1;
-                }
-                return 0;
-            });
-        });
-        return sortedArray;
     }
 
     private SortAlphabetic(leads: LeadModel[]): LeadModel[] {

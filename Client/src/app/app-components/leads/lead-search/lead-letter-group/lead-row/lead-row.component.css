@@ -1,0 +1,23 @@
+.expansion-panel-header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.collapsed-detail {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    line-height: 20pt;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.field-header {
+    font-size: 10pt;
+    font-weight: bold;
+    color: #020202;
+    display:inline;
+    font-family: 'Quicksand', sans-serif;
+}

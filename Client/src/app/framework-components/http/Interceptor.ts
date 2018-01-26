@@ -1,5 +1,5 @@
-import { Injectable, ComponentRef } from '@angular/core';
-import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpHeaders, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import { DialogService } from '../dialog/dialog.service';
@@ -20,7 +20,7 @@ export class Interceptor implements HttpInterceptor {
         return next.handle(authReq).do(
             (event: HttpEvent<any>) => {
                 if (event instanceof HttpResponse) {
-                    const e = event;
+                    // const e = event;
                 }
             },
             (err: any) => {
@@ -30,7 +30,7 @@ export class Interceptor implements HttpInterceptor {
                     const message: string = error.message ? error.message : err.message;
                     const name: string = error.name ? error.name : err.statusText;
                     setTimeout(() => {
-                        const alertModal = this._dialogService.alert(name, message);
+                        this._dialogService.alert(name, message);
                     }, 1000);
                 }
             },

@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -11,14 +11,12 @@ import { LandingMenuModule } from './app-components/landing-menu/landing-menu.mo
 import { AuthModule } from './auth/auth.module';
 import { LeadsCommonModule } from './app-components/common/common.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDialogModule, MatButtonModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatButtonModule, MatProgressSpinnerModule } from '@angular/material';
 import { DialogModule } from './framework-components/dialog/dialog.module';
 
 import { AppComponent } from './app.component';
 import { LandingMenuComponent } from './app-components/landing-menu/landing-menu.component';
 
-import { AuthService } from './auth.service';
-import { ApplicationRoutes } from './app.routes';
 import { CanActivateViaAuthGuard } from './authguard';
 
 import { AuthComponent } from './auth/auth.component';
@@ -32,6 +30,7 @@ import { LeadDetailComponent } from './app-components/leads/lead-detail/lead-det
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     LandingMenuModule,
     CommonModule,

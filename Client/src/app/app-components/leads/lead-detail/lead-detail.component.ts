@@ -57,7 +57,7 @@ export class LeadDetailComponent implements OnInit {
         this.RequestInProgress = true;
         this.LeadForm.LeadModel.UserId = +localStorage.getItem('UserId');
         this.EditingContext = this.LeadForm.LeadModel;
-        this.Service.Save(this.EditingContext).subscribe(res => {
+        this.Service.Save(this.EditingContext).subscribe(() => {
             this.RequestInProgress = false;
             this._router.navigate(['./leads']);
         });

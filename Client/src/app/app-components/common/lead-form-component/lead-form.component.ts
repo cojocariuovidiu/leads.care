@@ -1,14 +1,11 @@
 import { Component, OnInit, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Neighborhoods } from '../../../../../../Common/Arrays/Neighborhoods';
-import { Strings } from '../../../../../../Common/Strings';
 import { StatusTypes } from '../../../../../../Common/Enums/StatusTypes';
 import { LeadSearchCriteriaModel } from '../../../../../../Common/Models/LeadSearchCriteriaModel';
-import { LeadModel } from '../../../../../../Common/Models/LeadModel';
+// import { LeadModel } from '../../../../../../Common/Models/LeadModel';
 import { PhoneNumberModel } from '../../../../../../Common/Models/PhoneNumberModel';
-import { IMyDpOptions, IMyDateModel, IMyDate } from 'mydatepicker';
-import { Observable } from 'rxjs/Rx';
-import { Subject } from 'rxjs/Rx';
+import { IMyDpOptions, IMyDateModel } from 'mydatepicker';
 
 @Component({
     moduleId: module.id,

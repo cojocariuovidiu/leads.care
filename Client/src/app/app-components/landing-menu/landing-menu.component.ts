@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
     moduleId: module.id,
-    selector: 'app-landing-menu',
+    selector: 'pm-landing-menu',
     templateUrl: 'landing-menu.component.html',
     providers: []
 })

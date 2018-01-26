@@ -1,7 +1,5 @@
 import { MongoModel } from './MongoModel';
 import { PhoneNumberModel } from './PhoneNumberModel';
-import { Neighborhoods } from '../Arrays/Neighborhoods';
-import { Dictionary } from '../../Common/Types/Dictionary';
 
 export class LeadModel extends MongoModel {
     public LeadId?: number = undefined;

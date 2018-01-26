@@ -2,13 +2,13 @@ import { Observable } from 'rxjs/Rx';
 import { ConfirmDialogComponent } from './confirm/confirm.component';
 import { WaitIndicatorComponent } from './wait-indicator/wait-indicator.component';
 import { AlertDialogComponent } from './alert/alert.component';
-import { MatDialogRef, MatDialog, MatDialogConfig } from '@angular/material';
-import { Injectable, ComponentRef, ComponentFactory, ComponentFactoryResolver } from '@angular/core';
+import { MatDialogRef, MatDialog } from '@angular/material';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class DialogService {
 
-    constructor(private dialog: MatDialog, private _resolver: ComponentFactoryResolver) { }
+    constructor(private dialog: MatDialog) { }
 
     public alert(title: string, message: string): Observable<boolean> {
 
@@ -33,7 +33,7 @@ export class DialogService {
     }
 
     public custom(component: any, model?: any): Observable<any> {
-        const factory: ComponentFactory<any> = this._resolver.resolveComponentFactory(component);
+        // const factory: ComponentFactory<any> = this._resolver.resolveComponentFactory(component);
         let dialogRef: MatDialogRef<any>;
 
         dialogRef = this.dialog.open(component);
@@ -42,10 +42,10 @@ export class DialogService {
         return dialogRef.afterClosed();
     }
 
-    public customDialog<TDialog>(component: any): MatDialogRef<TDialog> {
-        const factory: ComponentFactory<any> = this._resolver.resolveComponentFactory(component);
-        return this.dialog.open<TDialog>(component);
-    }
+    // public customDialog<TDialog>(component: any): MatDialogRef<TDialog> {
+    //     const factory: ComponentFactory<any> = this._resolver.resolveComponentFactory(component);
+    //     return this.dialog.open<TDialog>(component);
+    // }
 
     public waitIndicator(message: string): MatDialogRef<WaitIndicatorComponent> {
 

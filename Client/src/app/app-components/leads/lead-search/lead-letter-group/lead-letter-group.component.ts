@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 // import { AppSettings } from '../../../../framework-components/Settings/AppSettings';
 
 @Component({
@@ -14,6 +14,5 @@ export class LeadLetterGroupComponent implements OnInit {
     constructor() {}
 
     public ngOnInit() {
-        const s = this.LetterGroup;
     }
 }

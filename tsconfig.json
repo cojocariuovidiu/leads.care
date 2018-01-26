@@ -9,7 +9,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
-
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "removeComments": false,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,

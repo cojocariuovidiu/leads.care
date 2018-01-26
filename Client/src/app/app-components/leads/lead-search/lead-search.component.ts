@@ -1,18 +1,13 @@
 import {
     Component,
-    ComponentRef,
     OnInit,
     OnDestroy,
-    AfterViewInit,
-    ViewChild,
-    ViewContainerRef,
-    ComponentFactoryResolver
+    ViewChild
 } from '@angular/core';
 import 'rxjs/add/operator/debounceTime';
 import { Location } from '@angular/common';
 import { LeadService } from '../Lead.Service';
 
-import { LookupTypes } from '../../../../../../Common/Enums/LookupTypes';
 import { LeadSearchCriteriaModel } from '../../../../../../Common/Models/LeadSearchCriteriaModel';
 import { Subscription } from 'rxjs/Subscription';
 import { SearchDataRegistry } from '../../../framework-components/services/SearchDataRegistry';
@@ -35,12 +30,11 @@ export class LeadSearchComponent implements OnInit, OnDestroy {
 
     constructor(
         private _location: Location,
-        public Service: LeadService,
-        private componentFactoryResolver: ComponentFactoryResolver) {
+        public Service: LeadService) {
     }
 
     public ngOnInit() {
-        this._modelChange = this.LeadForm.Form.valueChanges.debounceTime(1000).subscribe((data: any) => {
+        this._modelChange = this.LeadForm.Form.valueChanges.debounceTime(1000).subscribe(() => {
             this.Search();
         });
         if (SearchDataRegistry.Instance.GetSearchCriteria()) {

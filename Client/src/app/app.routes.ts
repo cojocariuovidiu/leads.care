@@ -1,9 +1,6 @@
-import { Routes, CanActivate } from '@angular/router';
-import { Injectable } from '@angular/core';
-import { AuthService } from './auth.service';
+import { Routes } from '@angular/router';
 import { AuthComponent } from './auth/auth.component';
 import { LandingMenuComponent } from './app-components/landing-menu/landing-menu.component';
-import { AppComponent } from './app.component';
 import { CanActivateViaAuthGuard } from './authguard';
 import { LeadSearchComponent } from './app-components/leads/lead-search/lead-search.component';
 import { LeadDetailComponent } from './app-components/leads/lead-detail/lead-detail.component';

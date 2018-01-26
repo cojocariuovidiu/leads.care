@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
-import { ActivatedRoute, Router, Params } from '@angular/router';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 import { StatusTypes } from '../../../../Common/Enums/StatusTypes';
 import { UserBaseRequestModel } from '../../../../Common/Models/UserBaseRequestModel';
@@ -23,7 +23,6 @@ export class AuthComponent implements OnInit {
 
     public constructor(
         private _router: Router,
-        private Route: ActivatedRoute,
         public Service: AuthService) { }
 
     public ngOnInit() {

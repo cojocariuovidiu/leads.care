@@ -1,4 +1,3 @@
-import { BasePaginationModel } from './BasePaginationModel';
 import { PhoneNumberModel } from './PhoneNumberModel';
 
 export class LeadSearchCriteriaModel {

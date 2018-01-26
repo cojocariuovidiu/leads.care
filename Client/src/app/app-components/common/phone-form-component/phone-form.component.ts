@@ -1,9 +1,7 @@
 import {
     Component,
     AfterViewInit,
-    EventEmitter,
     Input,
-    Output,
     ViewChild,
     ElementRef
 } from '@angular/core';
@@ -11,12 +9,12 @@ import { PhoneNumberModel } from '../../../../../../Common/Models/PhoneNumberMod
 
 @Component({
     moduleId: module.id,
-    selector: 'phone-form',
+    selector: 'pm-phone-form',
     templateUrl: 'phone-form.component.html'
 })
 export class PhoneFormComponent implements AfterViewInit {
     @Input() PhoneNumber: PhoneNumberModel;
-    @Output() private NumberChange = new EventEmitter<any>();
+    // @Output() private NumberChange = new EventEmitter<any>();
     @ViewChild('field1') public field1: ElementRef;
     @ViewChild('field2') public field2: ElementRef;
     @ViewChild('field3') public field3: ElementRef;

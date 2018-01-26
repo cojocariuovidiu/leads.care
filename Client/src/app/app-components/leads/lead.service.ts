@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse, HttpRequest } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 // import { AppSettings } from '../.../framework-components/Settings/AppSettings';
-import { LeadModel } from '../../../../../Common/Models/LeadModel';
+// import { LeadModel } from '../../../../../Common/Models/LeadModel';
 
 @Injectable()
 export class LeadService {

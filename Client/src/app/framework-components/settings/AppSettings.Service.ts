@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {Http, RequestOptions} from '@angular/http';
-import {Observable} from 'rxjs/Rx';
+// import {Http, RequestOptions} from '@angular/http';
+// import {Observable} from 'rxjs/Rx';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/delay';

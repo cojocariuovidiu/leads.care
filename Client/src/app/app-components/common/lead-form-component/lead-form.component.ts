@@ -14,7 +14,7 @@ import { PhoneNumberModel } from '../../../../../../Shared/Models/PhoneNumberMod
 export class LeadFormComponent implements OnInit {
     @Input() public SearchMode = false;
     @ViewChild('LeadForm') Form: NgForm;
-    @Output() private LeadChange = new EventEmitter<LeadSearchCriteriaModel>();
+    @Output() public LeadChange = new EventEmitter<LeadSearchCriteriaModel>();
     public LeadModel = new LeadSearchCriteriaModel();
     public Neighborhoods: string[] = Neighborhoods;
     public StatusTypes = StatusTypes;

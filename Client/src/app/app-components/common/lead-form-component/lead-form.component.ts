@@ -5,11 +5,10 @@ import { StatusTypes } from '../../../../../../Common/Enums/StatusTypes';
 import { LeadSearchCriteriaModel } from '../../../../../../Common/Models/LeadSearchCriteriaModel';
 // import { LeadModel } from '../../../../../../Common/Models/LeadModel';
 import { PhoneNumberModel } from '../../../../../../Common/Models/PhoneNumberModel';
-import { IMyDpOptions, IMyDateModel } from 'mydatepicker';
 
 @Component({
     moduleId: module.id,
-    selector: 'lead-form',
+    selector: 'pm-lead-form',
     templateUrl: 'lead-form.component.html'
 })
 export class LeadFormComponent implements OnInit {
@@ -17,16 +16,9 @@ export class LeadFormComponent implements OnInit {
     @ViewChild('LeadForm') Form: NgForm;
     @Output() private LeadChange = new EventEmitter<LeadSearchCriteriaModel>();
     public LeadModel = new LeadSearchCriteriaModel();
-    public DateSelected: IMyDateModel;
     public Neighborhoods: string[] = Neighborhoods;
     public StatusTypes = StatusTypes;
     public NeighborhoodsCheckboxObject: { [key: string]: boolean } = {};
-    public DatePickerOptions: IMyDpOptions = {
-        dateFormat: 'mm - dd - yyyy',
-        height: '70px',
-        width: '350px',
-        selectionTxtFontSize: '14px'
-    };
     constructor() { }
 
     public ngOnInit(): void {
@@ -37,23 +29,12 @@ export class LeadFormComponent implements OnInit {
 
     public AsyncInit(): void {
         this.SetNeighborhoodCheckboxes();
-        this.SetInitialMoveInDate();
     }
 
     public ClearAll(): void {
         this.LeadModel = new LeadSearchCriteriaModel();
         this.LeadModel.Neighborhoods = [];
         this.ResetNeighborhoodCheckboxes();
-        this.SetInitialMoveInDate();
-    }
-
-    public OnDateChanged(date: IMyDateModel) {
-        if (date.jsdate === null) {
-            this.LeadModel.MoveInDate = undefined;
-        } else {
-            this.LeadModel.MoveInDate = new Date(date.jsdate);
-        }
-        this.LeadChange.emit(this.LeadModel);
     }
 
     public OnChange(): void {
@@ -79,19 +60,6 @@ export class LeadFormComponent implements OnInit {
         for (let i = 0; i < this.Neighborhoods.length; i++) {
             this.NeighborhoodsCheckboxObject[this.Neighborhoods[i]] = false;
         }
-    }
-
-    private SetInitialMoveInDate(): void {
-        let initDate: any;
-        if (this.LeadModel.MoveInDate) {
-            const day = new Date(this.LeadModel.MoveInDate).getDate(),
-                month = new Date(this.LeadModel.MoveInDate).getMonth() + 1,
-                year = new Date(this.LeadModel.MoveInDate).getFullYear();
-            initDate = { date: { year: year, month: month, day: day } };
-        } else {
-            initDate = '';
-        }
-        this.DateSelected = initDate;
     }
 
     public PushNeighborhood(e: any): void {

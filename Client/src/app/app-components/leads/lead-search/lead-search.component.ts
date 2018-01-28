@@ -15,7 +15,7 @@ import { LeadFormComponent } from '../../common/lead-form-component/lead-form.co
 
 @Component({
     moduleId: module.id,
-    selector: 'app-lead-search',
+    selector: 'pm-lead-search',
     templateUrl: 'lead-search.component.html',
     providers: [LeadService]
 })
@@ -56,11 +56,6 @@ export class LeadSearchComponent implements OnInit, OnDestroy {
     }
 
     private Search(): void {
-        // let modal: ComponentRef<any> = this.ModalService.Confirm('OKYDOKY!');
-        // modal.instance.CloseSubject.subscribe((result: any) => {
-        //     let s = result;
-        // });
-        // let modal = this._modalService.ShowWaitIndicator('test');
         this.SearchCriteria = this.LeadForm.LeadModel;
         this.SearchCriteria.UserId = +localStorage.getItem('UserId');
         this.Service.Search(this.SearchCriteria).subscribe(
@@ -68,12 +63,10 @@ export class LeadSearchComponent implements OnInit, OnDestroy {
                 this.SearchResults = res.Content;
                 this.TotalElements = res.TotalElements;
                 this.Letters = Object.keys(this.SearchResults);
-                // modal.instance.OnClose();
             },
             undefined,
             () => {
                 SearchDataRegistry.Instance.RegisterSearchCriteria(this.LeadForm.LeadModel);
-                // modal.instance.OnClose();
             }
         );
     }

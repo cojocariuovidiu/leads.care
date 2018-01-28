@@ -3,7 +3,7 @@
     <label class="sub-header">
         <p class="sub-header-text">Lead Details</p>
     </label>
-    <lead-form (SearchCriteriaChange)="SearchCriteriaChange()" [SearchMode]="false"></lead-form>
+    <pm-lead-form (SearchCriteriaChange)="SearchCriteriaChange()" [SearchMode]="false"></pm-lead-form>
     <div class="save-changes-button-container">
         <button [disabled]="!LeadForm.IsValid()" class="btn btn-primary" (click)="SaveLead()">Save</button>
     </div>

@@ -8,7 +8,8 @@
     </mat-expansion-panel-header>
     <mat-panel-description>
         <div class="collapsed-detail">
-            <div><p class="field-header">Phone</p> {{Lead.Phone.FormattedNumber}}</div>
+            <!-- <div><p class="field-header">Phone</p> {{Lead.Phone.FormattedNumber}}</div> -->
+            <div><p class="field-header">Phone</p><a href="tel:+1-{{Lead.Phone.FormattedNumber}}"> {{Lead.Phone.FormattedNumber}}</a></div>
             <div><b class="field-header">Email</b> {{Lead.Email}}</div>
             <div><b class="field-header">Notes</b> {{Lead.Notes}}</div>
         </div>

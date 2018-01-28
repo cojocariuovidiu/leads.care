@@ -21,6 +21,9 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.mat-expansion-panel-content {
+    font-family: 'Quicksand', sans-serif;
+}
 /* @media only screen 
 and (min-device-width : 7px) 
 and (max-device-width : 1060px) {
@@ -117,14 +120,10 @@ p {
 }
 
 #search-header {
-    display: block;
-    height: 7%;
+    display: inline-flex;
     padding: 0.5em;
     text-align: center;
     font-size: 48px;
-    height: 60px;
-    width: 100%;  
-    background-color: #FEF9C7;
 }
 
 .sub-header {
@@ -427,10 +426,7 @@ a {
 
  .sub-header-text {
      font-size: 24px;
-     font-weight: 1px;
-     float: left;
-     color: #026670 ;
-     line-height: 90%;
+     color: #026670;
  }
 
  .hide-toggle {
@@ -644,8 +640,6 @@ textarea {
   }
   
   label {
-    color:blue;
-    text-decoration:underline;
     cursor:pointer;
   }
   

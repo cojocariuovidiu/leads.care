@@ -1,9 +1,11 @@
 .expansion-panel-header {
-    height: 100%;
+    height: 50px;
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
     font-family: 'Quicksand', sans-serif;
+}
+
+.expansion-panel-header div{
+    float: left;
 }
 
 .collapsed-detail {
@@ -20,4 +22,9 @@
     color: #020202;
     display:inline;
     font-family: 'Quicksand', sans-serif;
+}
+
+button {
+    color: #026670;
+    height: 50px;
 }

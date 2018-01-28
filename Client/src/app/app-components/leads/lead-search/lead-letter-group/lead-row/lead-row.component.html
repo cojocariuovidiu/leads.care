@@ -1,8 +1,8 @@
 <mat-expansion-panel [hideToggle]="true">
-    <mat-expansion-panel-header [ngClass]="{'orange-block-container': Lead.Status==1}" class="lead-arnold-a">
+    <mat-expansion-panel-header [collapsedHeight]="'50px'" [ngClass]="{'orange-block-container': Lead.Status==1}" class="lead-arnold-a">
         <div class="expansion-panel-header">
-            <p class="lead-name">{{Lead.Name}}</p>
-            <button [routerLink]="['/leads', Lead.LeadId]" mat-button>edit</button>
+            <div style="width:33%"><p class="lead-name">{{Lead.Name}}</p></div>
+            <button [routerLink]="['/leads', Lead.LeadId]" mat-button><i class="material-icons">create</i> edit</button>
             <div></div>
         </div>
     </mat-expansion-panel-header>

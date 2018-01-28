@@ -3,10 +3,11 @@ import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse, Htt
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import { DialogService } from '../dialog/dialog.service';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class Interceptor implements HttpInterceptor {
-    public constructor(private _dialogService: DialogService) { }
+    public constructor(private _dialogService: DialogService, private _router: Router) { }
     private waitModal: any;
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         this.waitModal = this._dialogService.waitIndicator('test');
@@ -27,10 +28,15 @@ export class Interceptor implements HttpInterceptor {
                 this.waitModal.close();
                 if (err instanceof HttpErrorResponse) {
                     const error = JSON.parse(err.error);
+                    // const error = err.error;
                     const message: string = error.message ? error.message : err.message;
                     const name: string = error.name ? error.name : err.statusText;
                     setTimeout(() => {
-                        this._dialogService.alert(name, message);
+                        this._dialogService.alert(name, message).subscribe(() => {
+                            if (err.status === 401) {
+                                this._router.navigate(['']);
+                            }
+                        });
                     }, 1000);
                 }
             },

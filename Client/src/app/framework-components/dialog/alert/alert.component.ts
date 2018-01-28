@@ -2,7 +2,7 @@ import { MatDialogRef } from '@angular/material';
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'alert-dialog',
+    selector: 'pm-alert-dialog',
     templateUrl: './alert.component.html'
 })
 export class AlertDialogComponent {

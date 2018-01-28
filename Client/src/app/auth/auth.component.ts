@@ -9,7 +9,7 @@ import { UserResponseModel } from '../../../../Common/Models/UserResponseModel';
 
 @Component({
     moduleId: module.id,
-    selector: 'app-auth-component',
+    selector: 'pm-auth-component',
     templateUrl: 'Auth.Component.html'
 })
 export class AuthComponent implements OnInit {

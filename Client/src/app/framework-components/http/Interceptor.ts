@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HttpResponse, HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse, HttpEvent, HttpInterceptor, HttpRequest, HttpResponse, HttpHandler } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/do';
 import { DialogService } from '../dialog/dialog.service';
@@ -28,7 +28,7 @@ export class Interceptor implements HttpInterceptor {
             (err: any) => {
                 // this._waitModal.close();
                 if (err instanceof HttpErrorResponse) {
-                    const error = JSON.parse(err.error);
+                    const error = err.error;
                     const message: string = error.message ? error.message : err.message;
                     const name: string = error.name ? error.name : err.statusText;
                     setTimeout(() => {

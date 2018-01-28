@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
-import { StatusTypes } from '../../../../Common/Enums/StatusTypes';
-import { UserBaseRequestModel } from '../../../../Common/Models/UserBaseRequestModel';
-import { UserSignupRequestModel } from '../../../../Common/Models/UserSignupRequestModel';
-import { UserResponseModel } from '../../../../Common/Models/UserResponseModel';
+import { StatusTypes } from '../../../../Shared/Enums/StatusTypes';
+import { UserBaseRequestModel } from '../../../../Shared/Models/UserBaseRequestModel';
+import { UserSignupRequestModel } from '../../../../Shared/Models/UserSignupRequestModel';
+import { UserResponseModel } from '../../../../Shared/Models/UserResponseModel';
 
 @Component({
     moduleId: module.id,

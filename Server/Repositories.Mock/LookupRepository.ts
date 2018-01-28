@@ -1,7 +1,7 @@
-import { LookupSearchCriteriaModel } from '../../Common/Models/LookupSearchCriteriaModel';
-import { PaginatedSearchResultModel } from '../../Common/Models/PaginatedSearchResultModel';
-import { LookupItemModel } from '../../Common/Models/LookupItemModel';
-import { LookupTypes } from '../../Common/Enums/LookupTypes';
+import { LookupSearchCriteriaModel } from '../../Shared/Models/LookupSearchCriteriaModel';
+import { PaginatedSearchResultModel } from '../../Shared/Models/PaginatedSearchResultModel';
+import { LookupItemModel } from '../../Shared/Models/LookupItemModel';
+import { LookupTypes } from '../../Shared/Enums/LookupTypes';
 import { SampleData } from './SampleData';
 
 export class LookupRepository {

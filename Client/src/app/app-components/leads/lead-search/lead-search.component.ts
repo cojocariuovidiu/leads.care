@@ -8,7 +8,7 @@ import 'rxjs/add/operator/debounceTime';
 import { Location } from '@angular/common';
 import { LeadService } from '../Lead.Service';
 
-import { LeadSearchCriteriaModel } from '../../../../../../Common/Models/LeadSearchCriteriaModel';
+import { LeadSearchCriteriaModel } from '../../../../../../Shared/Models/LeadSearchCriteriaModel';
 import { Subscription } from 'rxjs/Subscription';
 import { SearchDataRegistry } from '../../../framework-components/services/SearchDataRegistry';
 import { LeadFormComponent } from '../../common/lead-form-component/lead-form.component';

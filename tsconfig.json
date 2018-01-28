@@ -19,8 +19,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "target": "es5",
     "paths": {
-      "Common/*": [
-        "/Common"
+      "Shared/*": [
+        "/Shared"
       ]
     }
   },
@@ -49,8 +49,8 @@
 //     "skipLibCheck": true,
 //     "allowSyntheticDefaultImports": true,
 //     "paths": {
-//       "Common/*": [
-//         "/Common"
+//       "Shared/*": [
+//         "/Shared"
 //       ]
 //     }
 //   },

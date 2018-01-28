@@ -2,14 +2,14 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { LeadService } from '../Lead.Service';
-import { LeadModel } from '../../../../../../Common/Models/LeadModel';
-import { Neighborhoods } from '../../../../../../Common/Arrays/Neighborhoods';
-import { LookupTypes } from '../../../../../../Common/Enums/LookupTypes';
+import { LeadModel } from '../../../../../../Shared/Models/LeadModel';
+import { Neighborhoods } from '../../../../../../Shared/Arrays/Neighborhoods';
+import { LookupTypes } from '../../../../../../Shared/Enums/LookupTypes';
 import { LeadFormComponent } from '../../common/lead-form-component/lead-form.component';
 
 @Component({
     moduleId: module.id,
-    selector: 'lead-detail',
+    selector: 'pm-lead-detail',
     templateUrl: 'lead-detail.component.html',
     providers: [LeadService]
 })

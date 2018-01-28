@@ -3,7 +3,7 @@ import * as validator from 'mongoose-unique-validator';
 import * as autoIncrement from 'mongoose-auto-increment';
 import * as bcrypt from 'bcryptjs';
 import * as crypto from 'crypto';
-import { Dictionary } from '../../Common/Types/Dictionary';
+import { Dictionary } from '../../Shared/Types/Dictionary';
 
 export interface IUserSchema extends mongoose.Document {
     UserId: mongoose.Schema.Types.Number,

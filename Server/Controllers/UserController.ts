@@ -1,8 +1,8 @@
 import { JsonController, Post, Body, QueryParam } from 'routing-controllers';
 import { UserRepository } from '../Repositories.Mongo/UserRepository';
-import { UserBaseRequestModel } from '../../Common/Models/UserBaseRequestModel';
-import { UserSignupRequestModel } from '../../Common/Models/UserSignupRequestModel';
-import { UserResponseModel } from '../../Common/Models/UserResponseModel';
+import { UserBaseRequestModel } from '../../Shared/Models/UserBaseRequestModel';
+import { UserSignupRequestModel } from '../../Shared/Models/UserSignupRequestModel';
+import { UserResponseModel } from '../../Shared/Models/UserResponseModel';
 
 @JsonController('/User')
 export class UserController {

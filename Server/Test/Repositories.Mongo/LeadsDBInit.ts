@@ -4,10 +4,10 @@ import * as mongoose from 'mongoose';
 import { LeadSchema } from '../../Schema/Leads.Schema';
 import { UserSchema } from '../../Schema/Users.Schema';
 import { SampleData } from '../../Repositories.Mock/SampleData';
-import { DictionarySearchResultModel } from '../../../Common/Models/DictionarySearchResultModel';
-import { PhoneNumberModel } from '../../../Common/Models/PhoneNumberModel';
-import { LeadModel } from '../../../Common/Models/LeadModel';
-import { UserModel } from '../../../Common/Models/UserModel';
+import { DictionarySearchResultModel } from '../../../Shared/Models/DictionarySearchResultModel';
+import { PhoneNumberModel } from '../../../Shared/Models/PhoneNumberModel';
+import { LeadModel } from '../../../Shared/Models/LeadModel';
+import { UserModel } from '../../../Shared/Models/UserModel';
 import { Database } from '../../Framework/Database';
 
 describe('Server.LeadsDBInit', function () {

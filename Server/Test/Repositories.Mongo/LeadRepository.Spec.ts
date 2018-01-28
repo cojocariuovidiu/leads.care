@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 import { ISuiteCallbackContext } from 'mocha';
 import { LeadRepository } from '../../Repositories.Mongo/LeadRepository';
-import { DictionarySearchResultModel } from '../../../Common/Models/DictionarySearchResultModel';
-import { LeadSearchCriteriaModel } from '../../../Common/Models/LeadSearchCriteriaModel';
-import { PhoneNumberModel } from '../../../Common/Models/PhoneNumberModel';
-import { LeadModel } from '../../../Common/Models/LeadModel';
-import { Strings } from '../../../Common/Strings';
+import { DictionarySearchResultModel } from '../../../Shared/Models/DictionarySearchResultModel';
+import { LeadSearchCriteriaModel } from '../../../Shared/Models/LeadSearchCriteriaModel';
+import { PhoneNumberModel } from '../../../Shared/Models/PhoneNumberModel';
+import { LeadModel } from '../../../Shared/Models/LeadModel';
+import { Strings } from '../../../Shared/Strings';
 import { Database } from '../../Framework/Database';
 
 describe('Server.Repositories.Mongo.LeadRepository', function () {

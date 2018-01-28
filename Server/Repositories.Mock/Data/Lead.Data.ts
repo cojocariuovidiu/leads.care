@@ -1,4 +1,4 @@
-import { LeadModel } from '../../../Common/Models/LeadModel';
+import { LeadModel } from '../../../Shared/Models/LeadModel';
 import { DataGeneratorHelper } from './../Helpers/DataGeneratorHelper';
 
 export class LeadData {

@@ -1,7 +1,7 @@
 import { ServiceLocator } from '../Framework/ServiceLocator';
-import { IUserRepository } from '../../Common/Interfaces/IUserRepository';
-import { UserResponseModel } from '../../Common/Models/UserResponseModel';
-import { UserBaseRequestModel } from '../../Common//Models/UserBaseRequestModel';
+import { IUserRepository } from '../../Shared/Interfaces/IUserRepository';
+import { UserResponseModel } from '../../Shared/Models/UserResponseModel';
+import { UserBaseRequestModel } from '../../Shared//Models/UserBaseRequestModel';
 
 export class UserUnitOfWork {
     public Login(credentials: UserBaseRequestModel): Promise<UserResponseModel> {

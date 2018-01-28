@@ -42,10 +42,10 @@ gulp.task('copy-files', () => {
     ]).pipe(gulp.dest('./Dist/Settings/'))
 
     gulp.src([
-        './Common/**/*.js',
-        '!./Common/Interfaces',
-        '!./Common/Interfaces/**'
-    ]).pipe(gulp.dest('./Dist/Elsa/Application/Common/'));
+        './Shared/**/*.js',
+        '!./Shared/Interfaces',
+        '!./Shared/Interfaces/**'
+    ]).pipe(gulp.dest('./Dist/Elsa/Application/Shared/'));
 
     gulp.src('./Client/dist/**')
         .pipe(gulp.dest('./Dist/Elsa/Application/Client/'));

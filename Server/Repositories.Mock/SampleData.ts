@@ -1,11 +1,11 @@
-import { LeadModel } from '../../Common/Models/LeadModel';
+import { LeadModel } from '../../Shared/Models/LeadModel';
 import { LeadData } from './Data/Lead.Data';
-import { LeadSearchCriteriaModel } from '../../Common/Models/LeadSearchCriteriaModel';
+import { LeadSearchCriteriaModel } from '../../Shared/Models/LeadSearchCriteriaModel';
 import { DataGeneratorHelper } from './Helpers/DataGeneratorHelper';
-import { Neighborhoods } from '../../Common/Arrays/Neighborhoods';
-import { Strings } from '../../Common/Strings';
+import { Neighborhoods } from '../../Shared/Arrays/Neighborhoods';
+import { Strings } from '../../Shared/Strings';
 
-import { LookupItemModel } from '../../Common/Models/LookupItemModel';
+import { LookupItemModel } from '../../Shared/Models/LookupItemModel';
 
 export class SampleData {
     private static _instance: SampleData;
@@ -74,7 +74,7 @@ export class SampleData {
     // }
 
     // Helper Methods
-    public GetNextId(array): number {
+    public GetNextId(array: any[]): number {
         return array.sort(function (a, b) {
             a = a.Id;
             b = b.Id;

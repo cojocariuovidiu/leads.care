@@ -1,8 +1,8 @@
 import { ServiceLocator } from '../Framework/ServiceLocator';
-import { ILeadRepository } from '../../Common/Interfaces/ILeadRepository';
-import { LeadModel } from '../../Common/Models/LeadModel';
-import { LeadSearchCriteriaModel } from '../../Common/Models/LeadSearchCriteriaModel';
-import { DictionarySearchResultModel } from '../../Common/Models/DictionarySearchResultModel';
+import { ILeadRepository } from '../../Shared/Interfaces/ILeadRepository';
+import { LeadModel } from '../../Shared/Models/LeadModel';
+import { LeadSearchCriteriaModel } from '../../Shared/Models/LeadSearchCriteriaModel';
+import { DictionarySearchResultModel } from '../../Shared/Models/DictionarySearchResultModel';
 
 export class LeadUnitOfWork {
     public Get(leadId: number): Promise<any> {

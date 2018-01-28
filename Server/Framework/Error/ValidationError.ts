@@ -1,6 +1,6 @@
 import { BadRequestError } from 'routing-controllers';
-import { IMessageInfo } from '../../../Common/Interfaces/IMessageInfo';
-import { IResponseError } from '../../../Common/Interfaces/IResponseError';
+import { IMessageInfo } from '../../../Shared/Interfaces/IMessageInfo';
+import { IResponseError } from '../../../Shared/Interfaces/IResponseError';
 
 export class ValidationError extends BadRequestError implements IResponseError {
     public Details: IMessageInfo[];

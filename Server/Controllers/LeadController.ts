@@ -1,10 +1,10 @@
 import { JsonController, UseBefore, Get, Post, Delete, Body, Param } from 'routing-controllers';
-import { LeadModel } from '../../Common/Models/LeadModel';
+import { LeadModel } from '../../Shared/Models/LeadModel';
 import { TokenValidate } from '../Middleware/TokenValidate';
-import { PaginatedSearchResultModel } from '../../Common/Models/PaginatedSearchResultModel';
-import { LeadSearchCriteriaModel } from '../../Common/Models/LeadSearchCriteriaModel';
+import { PaginatedSearchResultModel } from '../../Shared/Models/PaginatedSearchResultModel';
+import { LeadSearchCriteriaModel } from '../../Shared/Models/LeadSearchCriteriaModel';
 import { LeadRepository } from '../Repositories.Mock/LeadRepository';
-import { ILeadRepository } from '../../Common/Interfaces/ILeadRepository';
+import { ILeadRepository } from '../../Shared/Interfaces/ILeadRepository';
 import { ServiceLocator } from '../Framework/ServiceLocator';
 import { LeadUnitOfWork } from '../UnitsOfWork/LeadUnitOfWork';
 

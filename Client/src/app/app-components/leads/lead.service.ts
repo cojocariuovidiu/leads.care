@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 // import { AppSettings } from '../.../framework-components/Settings/AppSettings';
-// import { LeadModel } from '../../../../../Common/Models/LeadModel';
+// import { LeadModel } from '../../../../../Shared/Models/LeadModel';
 
 @Injectable()
 export class LeadService {

@@ -1,5 +1,5 @@
 import { JsonController, Get } from 'routing-controllers';
-import { TestModel } from '../../Common/Models/TestModel';
+import { TestModel } from '../../Shared/Models/TestModel';
 import { TestRepository } from '../Repositories.Mock/TestRepository';
 
 @JsonController('/Test')

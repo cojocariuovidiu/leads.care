@@ -1,10 +1,10 @@
 import { Component, OnInit, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Neighborhoods } from '../../../../../../Common/Arrays/Neighborhoods';
-import { StatusTypes } from '../../../../../../Common/Enums/StatusTypes';
-import { LeadSearchCriteriaModel } from '../../../../../../Common/Models/LeadSearchCriteriaModel';
-// import { LeadModel } from '../../../../../../Common/Models/LeadModel';
-import { PhoneNumberModel } from '../../../../../../Common/Models/PhoneNumberModel';
+import { Neighborhoods } from '../../../../../../Shared/Arrays/Neighborhoods';
+import { StatusTypes } from '../../../../../../Shared/Enums/StatusTypes';
+import { LeadSearchCriteriaModel } from '../../../../../../Shared/Models/LeadSearchCriteriaModel';
+// import { LeadModel } from '../../../../../../Shared/Models/LeadModel';
+import { PhoneNumberModel } from '../../../../../../Shared/Models/PhoneNumberModel';
 
 @Component({
     moduleId: module.id,

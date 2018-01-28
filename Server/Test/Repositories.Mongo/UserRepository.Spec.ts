@@ -1,13 +1,13 @@
 import { expect } from 'chai';
 import { ISuiteCallbackContext } from 'mocha';
 import { UserRepository } from '../../Repositories.Mongo/UserRepository';
-import { DictionarySearchResultModel } from '../../../Common/Models/DictionarySearchResultModel';
-import { LeadSearchCriteriaModel } from '../../../Common/Models/LeadSearchCriteriaModel';
-import { PhoneNumberModel } from '../../../Common/Models/PhoneNumberModel';
-import { UserModel } from '../../../Common/Models/UserModel';
-import { UserSignupRequestModel } from '../../../Common/Models/UserSignupRequestModel';
-import { UserBaseRequestModel } from '../../../Common/Models/UserBaseRequestModel';
-import { Strings } from '../../../Common/Strings';
+import { DictionarySearchResultModel } from '../../../Shared/Models/DictionarySearchResultModel';
+import { LeadSearchCriteriaModel } from '../../../Shared/Models/LeadSearchCriteriaModel';
+import { PhoneNumberModel } from '../../../Shared/Models/PhoneNumberModel';
+import { UserModel } from '../../../Shared/Models/UserModel';
+import { UserSignupRequestModel } from '../../../Shared/Models/UserSignupRequestModel';
+import { UserBaseRequestModel } from '../../../Shared/Models/UserBaseRequestModel';
+import { Strings } from '../../../Shared/Strings';
 import { Database } from '../../Framework/Database';
 
 describe('Server.Repositories.Mongo.LeadRepository', function () {

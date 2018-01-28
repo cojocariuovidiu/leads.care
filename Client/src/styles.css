@@ -427,6 +427,7 @@ a {
  .sub-header-text {
      font-size: 24px;
      color: #026670;
+     padding-bottom: 14px;
  }
 
  .hide-toggle {

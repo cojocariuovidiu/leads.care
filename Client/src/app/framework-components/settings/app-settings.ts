@@ -7,7 +7,8 @@ export class AppSettings extends Registry {
 
     public IsInitialized = false;
 
-    public get Enums(): any { return this.Get('Enums'); }
+    public get enums(): any { return this.Get('Enums'); }
+    public get constants(): any { return this.Get('Constants'); }
 
     constructor() {
         super();

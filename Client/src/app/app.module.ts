@@ -23,6 +23,8 @@ import { AuthComponent } from './auth/auth.component';
 import { LeadsModule } from './app-components/leads/leads.module';
 import { LeadSearchComponent } from './app-components/leads/lead-search/lead-search.component';
 import { LeadDetailComponent } from './app-components/leads/lead-detail/lead-detail.component';
+import { AppSettingsService } from './framework-components/settings/app-settings.service';
+import { AppSettings } from './framework-components/settings/app-settings';
 
 @NgModule({
   declarations: [
@@ -56,6 +58,8 @@ import { LeadDetailComponent } from './app-components/leads/lead-detail/lead-det
   ],
   bootstrap: [AppComponent],
   providers: [
+    AppSettings,
+    AppSettingsService,
     CanActivateViaAuthGuard,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },

@@ -2,9 +2,8 @@ const environmentSettings = require('../appSettings.json');
 export class AppSettings {
     private static _registry: any = {};
 
-    public static get IsDebugMode(): boolean { return AppSettings.Get('IsDebugModel'); }
-    public static get IsProdMode(): boolean { return AppSettings.Get('IsProdMode'); }
     public static get Port(): number { return AppSettings.Get('Port'); }
+    public static get SecretKey(): string { return AppSettings.Get('SecretKey'); }
 
     public static Get(key: string): any {
         return AppSettings._registry[key];
@@ -19,8 +18,5 @@ export class AppSettings {
             AppSettings.Set(key, dict[key]);
         });
     }
-
-    public static GetSnapshot(): any {
-        return JSON.parse(JSON.stringify(AppSettings._registry));
-    }
 }
+AppSettings.Update(environmentSettings);

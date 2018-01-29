@@ -534,3 +534,4 @@
 {"level":"error","message":"2018-01-28T01:55:55.642Z ERROR --- ErrorLogMiddleware : 127.0.0.1 | 3000 | i | 06ff6c6d-24c1-8c98-68c8-dbf631bdbb67 | User not found | No user was found for the credentials you entered. | 76815f81-7ae0-0c1f-23a6-113f103ae16b","timestamp":"2018-01-28T01:55:55.643Z"}
 {"level":"info","message":"2018-01-28T02:00:41.601Z INFO --- Main : 127.0.0.1 | 3000 | - | c602d421-7eca-843f-2e1e-277b31f2f4e3 |  | App started...","timestamp":"2018-01-28T02:00:41.605Z"}
 {"level":"info","message":"2018-01-28T02:15:52.037Z INFO --- Main : 127.0.0.1 | 3000 | - | 7b9abf0a-493a-2ab9-0bb7-cfe602b41780 |  | App started...","timestamp":"2018-01-28T02:15:52.041Z"}
+{"level":"info","message":"2018-01-29T18:07:05.562Z INFO --- Main : undefined | 3000 | - | af891c34-e4ad-9e4f-b949-f21dd1cba2b0 |  | App started...","timestamp":"2018-01-29T18:07:05.566Z"}

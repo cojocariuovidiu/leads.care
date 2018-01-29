@@ -13,7 +13,7 @@
     </mat-expansion-panel>
     <div *ngIf="!Letters" style="background:rgba(0,0,0,0); padding-top:10px">
         <mat-spinner [strokeWidth]="5" style="margin:0 auto;"></mat-spinner>
-        <p style="text-align:center">...getting your leads</p>
+        <p style="text-align:center">getting your leads...</p>
     </div>
     <ng-container *ngFor="let letter of Letters">
         <lead-letter-group [Letter]="letter" [LetterGroup]="SearchResults[letter]"></lead-letter-group>

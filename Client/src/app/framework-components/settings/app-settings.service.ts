@@ -14,7 +14,7 @@ export class AppSettingsService {
         return this._httpClient.get(this._apiUrl)
             .do((response: any) => {
                 appSettings.setAll(response);
-                appSettings.IsInitialized = true;
+                appSettings.isInitialized = true;
                 return true;
             });
     }

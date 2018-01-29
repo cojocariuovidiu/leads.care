@@ -14,6 +14,7 @@ import { LeadSearchComponent } from './lead-search/lead-search.component';
 import { LeadDetailComponent } from './lead-detail/lead-detail.component';
 import { LeadLetterGroupComponent } from './lead-search/lead-letter-group/lead-letter-group.component';
 import { LeadRowComponent } from './lead-search/lead-letter-group/lead-row/lead-row.component';
+import { AppSettings } from '../../framework-components/settings/app-settings';
 
 @NgModule({
     imports: [
@@ -26,7 +27,7 @@ import { LeadRowComponent } from './lead-search/lead-letter-group/lead-row/lead-
         MatExpansionModule,
         MatButtonModule
     ],
-    exports: [ ],
+    exports: [],
     declarations: [
         LeadSearchComponent,
         LeadRowComponent,
@@ -34,8 +35,11 @@ import { LeadRowComponent } from './lead-search/lead-letter-group/lead-row/lead-
         LeadLetterGroupComponent
     ],
     entryComponents: [LeadSearchComponent],
-    providers: [LeadService,
-                SearchDataRegistry],
+    providers: [
+        LeadService,
+        AppSettings,
+        SearchDataRegistry
+    ]
 })
 export class LeadsModule { }
 

@@ -6,7 +6,6 @@ import { StatusTypes } from '../../../../Shared/Enums/StatusTypes';
 import { UserBaseRequestModel } from '../../../../Shared/Models/UserBaseRequestModel';
 import { UserSignupRequestModel } from '../../../../Shared/Models/UserSignupRequestModel';
 import { UserResponseModel } from '../../../../Shared/Models/UserResponseModel';
-import { AppSettingsService } from '../framework-components/settings/app-settings.service';
 
 @Component({
     moduleId: module.id,
@@ -24,7 +23,6 @@ export class AuthComponent implements OnInit {
 
     public constructor(
         private _router: Router,
-        private _appSettingsService: AppSettingsService,
         public Service: AuthService) { }
 
     public ngOnInit() {
@@ -55,7 +53,6 @@ export class AuthComponent implements OnInit {
                     localStorage.setItem('Token', res.Token);
                     localStorage.setItem('UserId', res.UserId.toString());
                     localStorage.setItem('Name', res.Name);
-                    this._getAppSettings();
                     this._router.navigate(['./welcome']);
                 }
             },
@@ -85,9 +82,5 @@ export class AuthComponent implements OnInit {
         if (this.IsNewUser) {
             this.AuthForm.reset();
         }
-    }
-
-    private _getAppSettings() {
-        this._appSettingsService.get().subscribe();
     }
 }

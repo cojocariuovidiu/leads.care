@@ -5,7 +5,7 @@ import { Registry } from '../../../../../Shared/Types/Registry';
 @Injectable()
 export class AppSettings extends Registry {
 
-    public IsInitialized = false;
+    public isInitialized = false;
 
     public get enums(): any { return this.Get('Enums'); }
     public get constants(): any { return this.Get('Constants'); }

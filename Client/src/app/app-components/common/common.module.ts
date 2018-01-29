@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { MatDatepickerModule, MatFormFieldModule, MatNativeDateModule, MatInputModule } from '@angular/material';
 import { LeadFormComponent } from './lead-form-component/lead-form.component';
 import { PhoneFormComponent } from './phone-form-component/phone-form.component';
+import { AppSettings } from '../../framework-components/settings/app-settings';
 
 
 @NgModule({
@@ -22,6 +23,9 @@ import { PhoneFormComponent } from './phone-form-component/phone-form.component'
     declarations: [
         LeadFormComponent,
         PhoneFormComponent
+    ],
+    providers: [
+        AppSettings
     ]
 })
 export class LeadsCommonModule { }

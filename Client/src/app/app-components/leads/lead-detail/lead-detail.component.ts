@@ -3,15 +3,14 @@ import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { LeadService } from '../Lead.Service';
 import { LeadModel } from '../../../../../../Shared/Models/LeadModel';
-import { Neighborhoods } from '../../../../../../Shared/Constants/Neighborhoods';
-import { LookupTypes } from '../../../../../../Shared/Enums/LookupTypes';
+// import { Neighborhoods } from '../../../../../../Shared/Constants/Neighborhoods';
 import { LeadFormComponent } from '../../common/lead-form-component/lead-form.component';
+import { AppSettings } from '../../../framework-components/settings/app-settings';
 
 @Component({
     moduleId: module.id,
     selector: 'pm-lead-detail',
-    templateUrl: 'lead-detail.component.html',
-    providers: [LeadService]
+    templateUrl: 'lead-detail.component.html'
 })
 export class LeadDetailComponent implements OnInit {
     @ViewChild(LeadFormComponent) public LeadForm: LeadFormComponent;
@@ -21,8 +20,8 @@ export class LeadDetailComponent implements OnInit {
     public Lead: LeadModel;
     public IsEditable: boolean;
     public KeyId: number;
-    public LookupTypes = LookupTypes;
-    public Neighborhoods = Neighborhoods;
+    // public Neighborhoods = Neighborhoods;
+    public Neighborhoods = this._appSettings.constants.Neighborhoods;
     public RequestInProgress = false;
     public NeighborhoodsCheckboxObject: { [key: string]: boolean } = {};
 
@@ -30,6 +29,7 @@ export class LeadDetailComponent implements OnInit {
         private _router: Router,
         private _route: ActivatedRoute,
         private _location: Location,
+        private _appSettings: AppSettings,
         public Service: LeadService) { }
 
     public OnBackClicked() {

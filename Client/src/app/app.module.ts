@@ -25,6 +25,7 @@ import { LeadSearchComponent } from './app-components/leads/lead-search/lead-sea
 import { LeadDetailComponent } from './app-components/leads/lead-detail/lead-detail.component';
 import { AppSettingsService } from './framework-components/settings/app-settings.service';
 import { AppSettings } from './framework-components/settings/app-settings';
+import { AppSettingsGuard } from './framework-components/settings/app-settings-guard';
 
 @NgModule({
   declarations: [
@@ -46,9 +47,9 @@ import { AppSettings } from './framework-components/settings/app-settings';
     RouterModule.forRoot([
       { path: '', component: AuthComponent },
       { path: 'welcome', component: LandingMenuComponent, canActivate: [CanActivateViaAuthGuard] },
-      { path: 'leads', component: LeadSearchComponent, canActivate: [CanActivateViaAuthGuard] },
-      { path: 'leads/:leadId', component: LeadDetailComponent, canActivate: [CanActivateViaAuthGuard] },
-      { path: 'leads/0', component: LeadDetailComponent, canActivate: [CanActivateViaAuthGuard] },
+      { path: 'leads', component: LeadSearchComponent, canActivate: [CanActivateViaAuthGuard, AppSettingsGuard] },
+      { path: 'leads/:leadId', component: LeadDetailComponent, canActivate: [CanActivateViaAuthGuard, AppSettingsGuard] },
+      { path: 'leads/0', component: LeadDetailComponent, canActivate: [CanActivateViaAuthGuard, AppSettingsGuard] },
       {
         path: '*/path',
         redirectTo: '',
@@ -61,6 +62,7 @@ import { AppSettings } from './framework-components/settings/app-settings';
     AppSettings,
     AppSettingsService,
     CanActivateViaAuthGuard,
+    AppSettingsGuard,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true },
   ]

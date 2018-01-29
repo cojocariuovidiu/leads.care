@@ -1,10 +1,9 @@
 import { Component, OnInit, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Neighborhoods } from '../../../../../../Shared/Constants/Neighborhoods';
-import { StatusTypes } from '../../../../../../Shared/Enums/StatusTypes';
 import { LeadSearchCriteriaModel } from '../../../../../../Shared/Models/LeadSearchCriteriaModel';
 // import { LeadModel } from '../../../../../../Shared/Models/LeadModel';
 import { PhoneNumberModel } from '../../../../../../Shared/Models/PhoneNumberModel';
+import { AppSettings } from '../../../framework-components/settings/app-settings';
 
 @Component({
     moduleId: module.id,
@@ -16,10 +15,10 @@ export class LeadFormComponent implements OnInit {
     @ViewChild('LeadForm') Form: NgForm;
     @Output() public LeadChange = new EventEmitter<LeadSearchCriteriaModel>();
     public LeadModel = new LeadSearchCriteriaModel();
-    public Neighborhoods: string[] = Neighborhoods;
-    public StatusTypes = StatusTypes;
+    public Neighborhoods: string[] = this._appSettings.constants.Neighborhoods;
+    public StatusTypes = this._appSettings.enums.StatusTypes;
     public NeighborhoodsCheckboxObject: { [key: string]: boolean } = {};
-    constructor() { }
+    constructor(private _appSettings: AppSettings) { }
 
     public ngOnInit(): void {
         this.LeadModel.Neighborhoods = this.LeadModel.Neighborhoods ? this.LeadModel.Neighborhoods : [];

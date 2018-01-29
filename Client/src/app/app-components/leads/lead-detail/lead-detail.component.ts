@@ -41,7 +41,7 @@ export class LeadDetailComponent implements OnInit {
             this.KeyId = +params['leadId'];
             this.IsNew = this.KeyId === 0;
             if (!this.IsNew) {
-                this.Service.Get(this.KeyId).subscribe(
+                this.Service.get(this.KeyId).subscribe(
                     (res) => {
                         this.EditingContext = res;
                         this.LeadForm.LeadModel = this.EditingContext;
@@ -57,7 +57,7 @@ export class LeadDetailComponent implements OnInit {
         this.RequestInProgress = true;
         this.LeadForm.LeadModel.UserId = +localStorage.getItem('UserId');
         this.EditingContext = this.LeadForm.LeadModel;
-        this.Service.Save(this.EditingContext).subscribe(() => {
+        this.Service.save(this.EditingContext).subscribe(() => {
             this.RequestInProgress = false;
             this._router.navigate(['./leads']);
         });

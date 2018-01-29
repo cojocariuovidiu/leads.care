@@ -6,24 +6,24 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class LeadService {
-    private EndpointBaseUrl = 'http://localhost:3000/api/' + 'Leads';
+    private _apiUrl= 'http://localhost:3000/api/' + 'Leads';
 
     constructor(private _httpClient: HttpClient) {
     } // public _appSettings: AppSettings
 
-    public Search(searchModel: any): Observable<any> {
-        return this._httpClient.post(`${this.EndpointBaseUrl}/Search`, searchModel);
+    public search(searchModel: any): Observable<any> {
+        return this._httpClient.post(`${this._apiUrl}/Search`, searchModel);
     }
 
-    public Get(leadId: number): Observable<any> {
-        return this._httpClient.get(`${this.EndpointBaseUrl}/${leadId}`);
+    public get(leadId: number): Observable<any> {
+        return this._httpClient.get(`${this._apiUrl}/${leadId}`);
     }
 
-    public Delete(leadId: number): Observable<any> {
-        return this._httpClient.delete(`${this.EndpointBaseUrl}/${leadId}`);
+    public delete(leadId: number): Observable<any> {
+        return this._httpClient.delete(`${this._apiUrl}/${leadId}`);
     }
 
-    public Save(model: any): Observable<any> {
-        return this._httpClient.post(this.EndpointBaseUrl, model);
+    public save(model: any): Observable<any> {
+        return this._httpClient.post(this._apiUrl, model);
     }
 }

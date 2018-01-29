@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { CanActivate } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
 
-import { AppSettings } from './AppSettings';
-import { AppSettingsService } from './AppSettings.Service';
+import { AppSettings } from './app-settings';
+import { AppSettingsService } from './app-settings.Service';
 
 @Injectable()
 export class AppSettingsGuard implements CanActivate {

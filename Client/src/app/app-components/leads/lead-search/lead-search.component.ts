@@ -58,7 +58,7 @@ export class LeadSearchComponent implements OnInit, OnDestroy {
     private Search(): void {
         this.SearchCriteria = this.LeadForm.LeadModel;
         this.SearchCriteria.UserId = +localStorage.getItem('UserId');
-        this.Service.Search(this.SearchCriteria).subscribe(
+        this.Service.search(this.SearchCriteria).subscribe(
             (res) => {
                 this.SearchResults = res.Content;
                 this.TotalElements = res.TotalElements;

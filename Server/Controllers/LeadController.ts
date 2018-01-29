@@ -3,9 +3,6 @@ import { LeadModel } from '../../Shared/Models/LeadModel';
 import { TokenValidate } from '../Middleware/TokenValidate';
 import { PaginatedSearchResultModel } from '../../Shared/Models/PaginatedSearchResultModel';
 import { LeadSearchCriteriaModel } from '../../Shared/Models/LeadSearchCriteriaModel';
-import { LeadRepository } from '../Repositories.Mock/LeadRepository';
-import { ILeadRepository } from '../../Shared/Interfaces/ILeadRepository';
-import { ServiceLocator } from '../Framework/ServiceLocator';
 import { LeadUnitOfWork } from '../UnitsOfWork/LeadUnitOfWork';
 
 @JsonController('/Leads')

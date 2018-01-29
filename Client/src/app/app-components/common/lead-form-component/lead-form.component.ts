@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Neighborhoods } from '../../../../../../Shared/Arrays/Neighborhoods';
+import { Neighborhoods } from '../../../../../../Shared/Constants/Neighborhoods';
 import { StatusTypes } from '../../../../../../Shared/Enums/StatusTypes';
 import { LeadSearchCriteriaModel } from '../../../../../../Shared/Models/LeadSearchCriteriaModel';
 // import { LeadModel } from '../../../../../../Shared/Models/LeadModel';

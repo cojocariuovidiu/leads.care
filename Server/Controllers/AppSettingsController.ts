@@ -1,6 +1,6 @@
 import { JsonController, UseBefore, Get } from 'routing-controllers';
 import { TokenValidate } from '../Middleware/TokenValidate';
-import { Neighborhoods } from '../../Shared/Arrays/Neighborhoods';
+const constants = require('../../Shared/Constants');
 const enums = require('../../Shared/Enums');
 
 @JsonController('/AppSettings')
@@ -9,9 +9,7 @@ export class AppSettingsController {
     @Get()
     public Get(): any {
         const appSettings: any = {};
-        appSettings.Constants = {
-            Neighborhoods: Neighborhoods
-        };
+        appSettings.Constants = constants;
         appSettings.Enums = enums;
 
         return appSettings;

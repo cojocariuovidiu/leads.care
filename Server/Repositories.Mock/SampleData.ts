@@ -2,7 +2,7 @@ import { LeadModel } from '../../Shared/Models/LeadModel';
 import { LeadData } from './Data/Lead.Data';
 import { LeadSearchCriteriaModel } from '../../Shared/Models/LeadSearchCriteriaModel';
 import { DataGeneratorHelper } from './Helpers/DataGeneratorHelper';
-import { Neighborhoods } from '../../Shared/Arrays/Neighborhoods';
+import { Neighborhoods } from '../../Shared/Constants/Neighborhoods';
 import { Strings } from '../../Shared/Strings';
 
 import { LookupItemModel } from '../../Shared/Models/LookupItemModel';
